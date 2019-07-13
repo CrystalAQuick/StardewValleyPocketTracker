@@ -8,25 +8,31 @@ an application from markup to deployment.
 #### Code Rules
   * SV Go shall be written in Java. 
   * Application shall be written with strong variable typing.  
-     * This is to build good coding practices, and to have code written as implicit as possible. 
+     * This is to build good coding practices, and to have code written as explicit as possible. 
   * Each line shall have a 100 character limit.  
-     * The is to improve code readability as it is
-   easier to read code in a digestible format.
+     * This is to improve code readability as it is easier to read code in a digestible format and
+     allows code to be diffed without excessive scrolling.
+  * Each variable name shall be written with a meaning naming convention and use the correct prefix 
+  where required. 
+     * This is to help improve code readability.
   * Code shall be properly formatted.  
     * This is to maintain consistency throughout all of the code files.
-  * Every feature shall introduced will be thoroughly testing using unit testing as well as instrumented 
-  testing.  
-     * This is to improve the UX.
+  * Every feature introduced shall be thoroughly tested using unit testing as well as instrumented 
+  testing. 
+     * This allows features to work as intended as new features or bugs get introduced. 
+  * Testing shall span across a minimum of 80% of each feature created.
+     * This is to give us confidence that we have tested thoroughly, and will reduce tests that 
+     do not provide value, or are hard to test.
+  * Developing shall be TDD. (Test-Driven Development)
+     * This is to help write cleaner code. 
   * Reusing of code when possible. 
-     * This is to improve application run time, and to build good coding 
-  practices. 
+     * This is to improve application run time. 
   * Each method that is created shall have a single responsibility.  
-     * This is to build good
-  coding practices.
+     * This is to build good coding practices by loosely following the SOLID principal. 
    
 ## Description
 This is a fan-made project.
-SV Go keeps track of calender events in Stardew Valley.
+Stardew Valley Go (SV Go) keeps track of calender events in Stardew Valley.
 The app also keeps track of items that the user has acquired.
 
 ## Visuals
