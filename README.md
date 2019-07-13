@@ -16,19 +16,14 @@ an application from markup to deployment.
   where required. 
      * This is to help improve code readability.
   * Code shall be properly formatted.  
-    * This is to maintain consistency throughout all of the code files.
-  * Every feature introduced shall be thoroughly tested using unit testing as well as instrumented 
-  testing. 
-     * This allows features to work as intended as new features or bugs get introduced. 
-  * Testing shall span across a minimum of 80% of each feature created.
-     * This is to give us confidence that we have tested thoroughly, and will reduce tests that 
-     do not provide value, or are hard to test.
+     * This is to maintain consistency throughout all of the code files.
   * Developing shall be TDD. (Test-Driven Development)
-     * This is to help write cleaner code. 
-  * Reusing of code when possible. 
-     * This is to improve application run time. 
-  * Each method that is created shall have a single responsibility.  
-     * This is to build good coding practices by loosely following the SOLID principal. 
+     *  Every feature introduced will be thoroughly tested using unit testing as well as 
+     instrumented testing. We will have a minimum of 80% target code coverage. This is to give us 
+     confidence that we have tested thoroughly, and will reduce tests that do not provide value, 
+     or are hard to test.    
+  * Each method that is created shall have a single responsibility and will reuse code when possible
+     * This ensures that code remains easily testable and is not cumbersome to debug.
    
 ## Description
 This is a fan-made project.
