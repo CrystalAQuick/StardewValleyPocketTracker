@@ -5,8 +5,8 @@ android:
     - build-tools-29.0.0
     - android-29
     - sys-image-x86-android-26 # todo See if android 29 can be used.
-  licenses:
-    - 'android-sdk-license-.+'
+licenses:
+  - 'android-sdk-license-.+'
 
 before_install:
   - yes | sdkmanager "platforms;android-29"
