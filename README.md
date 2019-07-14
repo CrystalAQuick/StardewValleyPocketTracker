@@ -1,11 +1,16 @@
 # SV Go
 
+## Description
+This is a fan-made project.
+Stardew Valley Go (SV Go) keeps track of calender events in Stardew Valley.
+The app also keeps track of items that the user has acquired.
+
 ## Purpose
 This is an android application that is being created to gain experience developing android
 applications written in Java, using git, solidifying programming fundamentals, and designing
 an application from markup to deployment.
 
-#### Code Rules
+## Code Best Practices
   * SV Go shall be written in Java.
   * Application shall be written with strong variable typing.
      * This is to build good coding practices, and to have code written as explicit as possible.
@@ -25,43 +30,16 @@ an application from markup to deployment.
   * Each method that is created shall have a single responsibility and will reuse code when possible
      * This ensures that code remains easily testable and is not cumbersome to debug.
 
-## Description
-This is a fan-made project.
-Stardew Valley Go (SV Go) keeps track of calender events in Stardew Valley.
-The app also keeps track of items that the user has acquired.
-
 ## Screenshots
 These mockups will be replaced with screenshots as features are implemented. All mocks are subject to change as necessary.
-### Home Screen
-The home screen is the default landing page. It will have the app logo, buttons leading to the app's two primary features (Event Viewer and Checklist). The settings button is universally accessible.
 
-![Main Activity](/app/src/main/res/ui-mocks/Main\ Activity.png "Main Activity")
-
-### Settings Screen
-The settings screen is accessible from all activities. When returning from it, the previously viewed activity is displayed.
-Some settings may be set based on the user activity, such as their event viewer preference. All settings are applied immediately and persist between sessions.
-If the user chooses to clear all preferences or reset data, they will be asked to confirm.
-
-![Settings Activity](/app/src/main/ui-mocks/Settings.png "Settings Activity")
-
-### Events Screen
-The events screen displays all calendar events in a calendar or list view (pictured below). The user's view preference and last visited month (or first expanded, in list view) is stored as a preference and retrieved when the window is revisited.
-
-![Events Screen Calendar](/app/src/main/ui-mocks/Events\ (Calendar\ View).png "Events Activity - Calendar View")
-![Events Screen List](/app/src/main/ui-mocks/Events\ (List\ View).png "Events Activity - List View")
-
-### Checklist Screen
-The checklist screen displays all bundle requests. Users can track their progress for each individually, and their progress is retained between sessions.
-The tracker supports both single-item requests (checklist) and multi-item requests (numeric control).
-
-![Checklist Screen](/app/src/main/ui-mocks/Checklist.png "Checklist Activity")
-
-### Details Dilaog (Post-MVP Feature)
-The details dialog will display when the user taps an item in the events and checklist screens.
-It will display additional information about the item tapped and can be dismissed by tapping Close or outside the dialog.
-Some settings options will display a dialog requesting confirmation before the operation is performed.
-
-![Dialog](/app/src/main/ui-mocks/Details\ Dialog.png "Details Dialog")
+| Screenshot | Content |
+| ---------- | ------- |
+![Main Activity](/app/src/main/res/ui-mocks/MainActivity.png "Main Activity") | **Home Screen** - The home screen is the default landing page. It will have the app logo, buttons leading to the app's two primary features (Event Viewer and Checklist). The settings button is universally accessible.
+![Settings Activity](/app/src/main/res/ui-mocks/Settings.png "Settings Activity") | **Settings Screen** - The settings screen is accessible from all activities. When returning from it, the previously viewed activity is displayed. Some settings may be set based on the user activity, such as their event viewer preference. All settings are applied immediately and persist between sessions. If the user chooses to clear all preferences or reset data, they will be asked to confirm.
+![Events Screen Calendar](/app/src/main/res/ui-mocks/Events_CalendarView.png "Events Activity - Calendar View") ![Events Screen List](/app/src/main/res/ui-mocks/Events_ListView.png "Events Activity - List View") | **Events Screen** - The events screen displays all calendar events in a calendar or list view (pictured below). The user's view preference and last visited month (or first expanded, in list view) is stored as a preference and retrieved when the window is revisited.
+![Checklist Screen](/app/src/main/res/ui-mocks/Checklist.png "Checklist Activity") | **Checklist Screen** - The checklist screen displays all bundle requests. Users can track their progress for each individually, and their progress is retained between sessions. The tracker supports both single-item requests (checklist) and multi-item requests (numeric control).
+![Dialog](/app/src/main/res/ui-mocks/DetailsDialog.png "Details Dialog") | **Details Dialog (Post-MVP Feature)** - The details dialog will display when the user taps an item in the events and checklist screens. It will display additional information about the item tapped and can be dismissed by tapping Close or outside the dialog. Some settings options will display a dialog requesting confirmation before the operation is performed.
 
 ## Installation
 Android version 4.0.3 (Ice Cream Sandwich) or higher is required.
