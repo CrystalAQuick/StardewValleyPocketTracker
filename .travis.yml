@@ -1,16 +1,12 @@
 sudo: false
-language: android
-
-jdk:
-  - oraclejdk8
+language: java
+jdk: oraclejdk8
 
 android:
   components:
-#    - tools
-#    - platform-tools
     - build-tools-25.0.3
-    - android-24
     - android-22
+    - android-16
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
@@ -23,15 +19,30 @@ before_cache:
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
+    # Gradle
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+    # Android
+    - $HOME/android-sdk-dl
+    - $HOME/android-sdk
     - $HOME/.android/build-cache
 
-before_install:
-  - yes | sdkmanager "platforms;android-27"
+install:
+  # Download and unzip the Android SDK tools (if not already there thanks to the cache mechanism)
+  # Latest version available here: https://developer.android.com/studio/#command-tools
+  - if test ! -e $HOME/android-sdk-dl/sdk-tools.zip ; then curl https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip > $HOME/android-sdk-dl/sdk-tools.zip ; fi
+  - unzip -qq -n $HOME/android-sdk-dl/sdk-tools.zip -d $HOME/android-sdk
+
+  # Install or update Android SDK components (will not do anything if already up to date thanks to the cache mechanism)
+  - echo y | $HOME/android-sdk/tools/bin/sdkmanager 'platform-tools' > /dev/null
+  - echo y | $HOME/android-sdk/tools/bin/sdkmanager 'build-tools;28.0.3' > /dev/null
+  - echo y | $HOME/android-sdk/tools/bin/sdkmanager 'platforms;android-28' > /dev/null
+
+env:
+  - ANDROID_HOME=$HOME/android-sdk
 
 before_script:
-  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a -c 32M
+  - echo no | android create avd --force -n test -t android-16 --abi armeabi-v7a -c 32M
   - emulator -avd test -no-audio -no-window &
   - android-wait-for-emulator
   - sleep 180
