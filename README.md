@@ -54,11 +54,8 @@ Download for FREE on Google Play <insert link to app store>
   * assassinsgreed
   
 ### Licensing
-  * Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/authors/smashicons)
+  * Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com)
    
 ### Special thanks to
   * Stardew Valley's creator [ConcernedApe](https://twitter.com/concernedape?lang=en)
-  
-
-  
   
