@@ -71,8 +71,16 @@ Download for FREE on Google Play <insert link to app store>
 <insert visual example of apps functionality?>
 
 ## Authors and Acknowledgment
-### **Developers**
+### Developers
   * CrystalAQuick
   * assassinsgreed
-### **Special thanks to**
-  * <insert licencing and approval of assets?>
+  
+### Licensing
+  * Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/authors/smashicons)
+   
+### Special thanks to
+  * Stardew Valley's creator [ConcernedApe](https://twitter.com/concernedape?lang=en)
+  
+
+  
+  
