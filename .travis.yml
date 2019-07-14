@@ -6,8 +6,10 @@ jdk:
 
 android:
   components:
+    - build-tools-29.0.0
+    - android-29
+    - sys-image-x86-android-26 # todo See if android 29 can be used.
     - tools
-    - build-tools-27.0.2
     - extra-android-support
     - extra-google-m2repository
     - extra-android-m2repository
