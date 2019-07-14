@@ -25,7 +25,7 @@ cache:
     # Android
     - $HOME/.android/build-cache
 
-before_install: yes | sdkmanager "platforms;android-16"
+before_install: yes | sdkmanager "platforms;android-27"
 
 before_script:
   - echo no | android create avd --force -n test -t android-16 --abi armeabi-v7a -c 32M
