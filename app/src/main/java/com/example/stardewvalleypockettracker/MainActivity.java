@@ -6,22 +6,14 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-
-    @Override
+public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.settings_icon, menu);
-        return true;
+        setTitle(R.string.activity_main);
+        // TODO: Remove once settings menu sets to View.Invisible; this is here now so the method has a reference
+        setSettingsVisibility(View.VISIBLE);
     }
 }
