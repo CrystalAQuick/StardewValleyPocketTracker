@@ -31,9 +31,4 @@ public class MainActivity extends BaseActivity {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
-
-
-
-
-
 }
