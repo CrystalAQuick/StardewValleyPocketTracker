@@ -55,6 +55,9 @@ Download for FREE on Google Play <insert link to app store>
   
 ### Licensing
   * Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com)
+
+### Tooling
+  * [Discord Hooks](https://github.com/DiscordHooks/travis-ci-discord-webhook) by K34n31p4nic
    
 ### Special thanks to
   * Stardew Valley's creator [ConcernedApe](https://twitter.com/concernedape?lang=en)
