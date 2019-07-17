@@ -10,7 +10,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="343dp"
         android:text="Hello World!" />
 
     <ImageView
@@ -23,19 +25,31 @@
         android:layout_marginTop="140dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:contentDescription="@string/logo"
-        tools:srcCompat="@drawable/logo" />
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/btnEvents"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="159dp"
-        android:layout_marginLeft="159dp"
-        android:layout_marginBottom="323dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="127dp"
+        android:layout_marginBottom="332dp"
         android:text="@string/activity_events" />
+
+    <Button
+        android:id="@+id/btnChecklist"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="127dp"
+        android:layout_marginBottom="233dp"
+        android:text="Checklist" />
 
 </RelativeLayout>

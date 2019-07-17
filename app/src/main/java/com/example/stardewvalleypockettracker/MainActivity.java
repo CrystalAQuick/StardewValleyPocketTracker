@@ -1,8 +1,8 @@
 package com.example.stardewvalleypockettracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 public class MainActivity extends BaseActivity {
 
@@ -10,10 +10,38 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(R.string.activity_main);
-        setSettingsVisibility(View.VISIBLE);
-        int logoResourceID = getResources().getIdentifier("drawable/logo", null, this.getPackageName());
-        ImageView testImage = findViewById(R.id.logo);
-        testImage.setImageResource(logoResourceID);
         openActivitiesOnClick();
+        onClickEventButtonActivity();
+        onClickChecklistButtonActivity();
     }
+
+    public void onClickEventButtonActivity(){
+        View eventsButton = findViewById(R.id.btnEvents);
+        eventsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                openEventsActivity();
+            }
+        });
+    }
+
+    public void onClickChecklistButtonActivity(){
+        View eventsButton = findViewById(R.id.btnChecklist);
+        eventsButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                openChecklistActivity();
+            }
+        });
+    }
+
+    public void openEventsActivity(){
+        Intent intent = new Intent(this, EventsActivity.class);
+        startActivity(intent);
+    }
+    public void openChecklistActivity(){
+        Intent intent = new Intent(this, ChecklistActivity.class);
+        startActivity(intent);
+    }
+
 }

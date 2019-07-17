@@ -28,23 +28,10 @@ abstract class BaseActivity extends AppCompatActivity {
                 openSettingsMenu();
             }
         });
-
-        View eventsButton = findViewById(R.id.btnEvents);
-        eventsButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                openEventsActivity();
-            }
-        });
     }
 
     public void openSettingsMenu(){
         Intent intent = new Intent(this, SettingsActivity.class);
-        startActivity(intent);
-    }
-
-    public void openEventsActivity(){
-        Intent intent = new Intent(this, EventsActivity.class);
         startActivity(intent);
     }
 
