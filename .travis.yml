@@ -11,33 +11,40 @@ android:
 licenses:
   - 'android-sdk-license-.+'
 
-before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-cache:
-  directories:
-    # Gradle
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    # Android
-    - $HOME/.android/build-cache
+jobs:
+  include:
+    - stage: Pre-Build
+      # TODO: Add linting
+      script: ./gradlew test
+      # TODO: Add code coverage
+    -stage: Instrumented Tests
+      before_cache:
+        - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+        - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+      cache:
+        directories:
+          # Gradle
+          - $HOME/.gradle/caches/
+          - $HOME/.gradle/wrapper/
+          # Android
+          - $HOME/.android/build-cache
 
-before_install: yes | sdkmanager "platforms;android-27"
+      before_install: yes | sdkmanager "platforms;android-27"
 
-before_script:
-  - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a -c 32M
-  - emulator -avd test -no-skin -no-audio -no-window &
-  - android-wait-for-emulator
-  - sleep 180
-  - adb devices
-  - adb shell input keyevent 82 &
-script: ./gradlew connectedAndroidTest
-
-after_success:
-  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
-  - chmod +x send.sh
-  - ./send.sh success $WEBHOOK_URL
-after_failure:
-  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
-  - chmod +x send.sh
-  - ./send.sh failure $WEBHOOK_URL
+      before_script:
+        - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a -c 32M
+        - emulator -avd test -no-skin -no-audio -no-window &
+        - android-wait-for-emulator
+        - sleep 180
+        - adb devices
+        - adb shell input keyevent 82 &
+      script: ./gradlew connectedAndroidTest
+    -stage: Post Build
+      after_success:
+        - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+        - chmod +x send.sh
+        - ./send.sh success $WEBHOOK_URL
+      after_failure:
+        - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+        - chmod +x send.sh
+        - ./send.sh failure $WEBHOOK_URL
