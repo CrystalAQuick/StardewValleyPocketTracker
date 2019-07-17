@@ -13,14 +13,14 @@ licenses:
 
 jobs:
   include:
-    - stage: Pre-Build
+    - stage: Pre Build
       # TODO: Add linting
       script: ./gradlew test
       # TODO: Add code coverage
-    -stage: Instrumented Tests
+    - stage: Instrumented Tests
       before_cache:
-        - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-        - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+      - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+      - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
       cache:
         directories:
           # Gradle
@@ -39,7 +39,7 @@ jobs:
         - adb devices
         - adb shell input keyevent 82 &
       script: ./gradlew connectedAndroidTest
-    -stage: Post Build
+    - stage: Post Build
       after_success:
         - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
         - chmod +x send.sh
