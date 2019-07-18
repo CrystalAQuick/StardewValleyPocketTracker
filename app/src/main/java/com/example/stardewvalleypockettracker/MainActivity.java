@@ -15,7 +15,7 @@ public class MainActivity extends BaseActivity {
         onClickChecklistButtonActivity();
     }
 
-    public void onClickEventButtonActivity(){
+    public void onClickEventButtonActivity() {
         View eventsButton = findViewById(R.id.btnEvents);
         eventsButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -25,9 +25,9 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    public void onClickChecklistButtonActivity(){
-        View eventsButton = findViewById(R.id.btnChecklist);
-        eventsButton.setOnClickListener(new View.OnClickListener(){
+    public void onClickChecklistButtonActivity() {
+        View checklistButton = findViewById(R.id.btnChecklist);
+        checklistButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 openChecklistActivity();
@@ -35,11 +35,11 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    public void openEventsActivity(){
+    public void openEventsActivity() {
         Intent intent = new Intent(this, EventsActivity.class);
         startActivity(intent);
     }
-    public void openChecklistActivity(){
+    public void openChecklistActivity() {
         Intent intent = new Intent(this, ChecklistActivity.class);
         startActivity(intent);
     }
