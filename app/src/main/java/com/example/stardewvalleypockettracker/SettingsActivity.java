@@ -10,5 +10,6 @@ public class SettingsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.toolbar); // TODO: reference xml after layout is created
         setTitle(R.string.activity_settings);
+        setSettingsVisibility(View.INVISIBLE);
     }
 }

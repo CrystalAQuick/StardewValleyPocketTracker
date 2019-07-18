@@ -7,13 +7,6 @@
 
     <include layout="@layout/toolbar" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="343dp"
-        android:text="Hello World!" />
 
     <ImageView
         android:id="@+id/logo"
@@ -50,6 +43,6 @@
         android:layout_marginStart="127dp"
         android:layout_marginLeft="127dp"
         android:layout_marginBottom="233dp"
-        android:text="Checklist" />
+        android:text="@string/activity_checklists" />
 
 </RelativeLayout>
