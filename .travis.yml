@@ -41,7 +41,6 @@ jobs:
         - adb devices
         - adb shell input keyevent 82 &
       script: ./gradlew connectedAndroidTest
-    - stage: Post Build
       after_success:
         - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
         - chmod +x send.sh
