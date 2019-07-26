@@ -7,7 +7,6 @@
 
     <include layout="@layout/toolbar" />
 
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
@@ -16,8 +15,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="140dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/logo" />
 

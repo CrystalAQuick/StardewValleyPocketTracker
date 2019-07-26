@@ -20,7 +20,7 @@ abstract class BaseActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    public void openActivitiesOnClick(){
+    public void openActivitiesOnClick() {
         View settingsButton = findViewById(R.id.settings_icon);
         settingsButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -30,7 +30,7 @@ abstract class BaseActivity extends AppCompatActivity {
         });
     }
 
-    public void openSettingsMenu(){
+    public void openSettingsMenu() {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }

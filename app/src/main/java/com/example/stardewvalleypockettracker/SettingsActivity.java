@@ -8,7 +8,7 @@ public class SettingsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.toolbar); // TODO: reference xml after layout is created
+        setContentView(R.layout.activity_settings);
         setTitle(R.string.activity_settings);
         setSettingsVisibility(View.INVISIBLE);
     }
